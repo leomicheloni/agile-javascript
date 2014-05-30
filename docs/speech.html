@@ -1,0 +1,279 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+<pre id="titulo" class="titulo">
+Desarrollo ágil con Javascript.
+ Prácticas, técnicas y herramientas
+</pre>
+
+
+<pre id="data" class="data">
+Mi nombre es Leonardo Micheloni
+<a href="http://twitter.com/leomicheloni">@leomicheloni</a>
+Trabajo en Kinetica Solutions como desarrollador
+</pre>
+
+
+<pre id="objetivo" class="objetivo">
+<div>¿Cuál es el objetivo?</div>
+Vamos a hablar, repasar, probar y poner en práctica cosas que usamos día de a día para el desarrollo ágil.
+
+<ul>
+<li>Nos dedicamos a hacer software</li>
+<li>Lo hacemos de manera ágil</li>
+<li title="entendiendo por herramientas no solo cosas tecnicas">Tratamos de usar la mejor herramienta que tenemos a mano</li>
+<li>Nos gusta hacer retrospectivas de qué tan bien estamos haciendo las cosas</li>
+</ul>
+
+En resumen: nuestro objetivo es satisfacer al cliente y disfrutar haciendo las cosas bien.
+</pre>
+
+<pre id="agenda" class="agenda">
+<div>Agenda</div>
+<table>
+<tr>
+	<td>9:45</td><td>Presentación</td>
+</tr>
+<tr>
+	<td>10:00</td><td>Introducción</td>
+</tr>
+<tr>
+	<td>10:30</td><td>Agilidad</td>
+</tr>
+<tr>
+	<td>11:00</td><td>Arquitectura (SOLID) YAGNI DRY MVC</td>
+</tr>
+<tr>
+	<td>12:00</td><td>Herramientas</td>
+</tr>
+<tr>
+	<td>14:00</td><td>Almuerzo</td>
+</tr>
+<tr>
+	<td>15:00</td><td>Almuerzo</td>
+</tr>
+<tr>
+	<td>16:00</td><td>Almuerzo</td>
+</tr>
+</tr>
+	<td>17:00</td><td>Almuerzo</td>
+</tr>
+<tr>
+<td>17:45</td><td>Almuerzo</td>
+</tr>
+</table>
+</pre>
+
+<pre id="agilidad" class="agilidad">
+<div>Agilidad</div>
+<span>Qué es la agilidad?</span>
+<span>Qué problemas permite afrontar?</span>
+<span>Cuáles son las metodologías más difundidas?</span>
+
+<ul>
+<li>Scrum</li>
+<li>XP</li>
+<li>Kamban</li>
+</ul>
+
+
+Surge de la necesidad de llevar adelante proyectos donde el ambiente es cambiante.
+Es más forma de gestionar la relación del equipo, las roles y el potencial de las personas.
+La agilidad también es:
+
+<span>responde rápido a los cambios</span>
+</pre>
+
+<pre id="problemas">
+<div>Hay un problema</div>
+El problema es que para soportar todos esos principios hace falta apoyarse en técnicas (llamemoslás costumbres)
+</pre>
+
+<pre>
+<div>Por ejemplo</div>
+Es difícil soportar cambios continúos si nuestra arquitectura no escala
+<a href="#arquitectura">Tenemos que seguir principios de arquitectura</a>
+Es muy costoso tener que hacer ciertas tareas a mano
+<a href="#automatizacion">tenemos que automatizar el despliege del soft y otras tareas (delivery continuo)</a>
+A medida que crece la complejidad del proyecto es más importante hacer pruebas de regresión
+<a href="#tdd">tenemos que automatizar pruebas unitarias</a>
+Es costos probar todo de nuevo, y es complejo probar la UI de manera consistente
+<a href="#selemiun">Prueba de UI automáticas o semi automáticas</a>
+Que no haya partes "oscuras" del código y tener propiedad colectiva del código.
+<a href="#pair">Pair programing</a>
+Es importante poder soportar versiones previas del producto, gestionar RC, version de concepto, etc.
+<a href="#git">Tenemos que contar con un gestión de versiones potente y confiable</a> 
+</pre>
+TDD
+
+<pre id="git">
+<div>GIT</div>
+El control de versiones nos tiene que permitir gestionar cambios
+<ul>
+	<li>trabajar paralelamente</li>
+	<li>ser flexible</li>
+	<li>ser rápido</li>
+	<li>ser confiable</li>
+	<li>trabajo remoto</li>
+	<li>brach branch brach</li>
+</ul>
+</pre>
+
+
+<pre id="arquitectura">
+<div>Principios de arquitectura</div>
+Patrones: MVC, Facade, Repositoy, etc.
+Técnicas: IoC, Interfaces, reutilización, etc.
+Prácticas: DRY, YAGNI (ser vago)
+Pricipios: SOLID
+
+SOLID:
+ Responsabilidad única
+ Open close
+ Liskov
+ Interface segregation
+ Dependency inversion
+ 
+Pero......necesitamos utilizar herramientas para cumplir con SOLID y todo lo demás.
+(o hacerlo a mano, pero eso va en contra de el principio de DYR o reinventar la rueda)
+
+</pre>
+
+<pre>
+
+<pre id="pair">
+<div>Pair programing</div>
+Otra prácticas que usamos para poder seguir los principios de la agilidad (por ejemplo propiedad colectiva del código) es pair programing?
+
+cuántos hace pair de ustedes? (encuentas)
+<ul>
+	<li>código colectivo</li>
+	<li>poder pensar mejor problemas complejos</li>
+	<li>decisiones de micro-arquitectura</li>
+	<li>nivelación de conocimientos</li>
+</ul>
+ 
+</pre>
+
+<pre id="tdd">
+<div>TDD</div>
+<ul>
+	<li>Tener un conjunto de test que permite validar funcionalidades core (al menos)</li>
+	<li>Ir descubriendo interfaces y dependencias</li>
+	<li>Es posible hacer TDD siempre</li>
+	<li>mocking</li>
+	<li>Ir avanzando gradualmente con mocking (convinación de SOLID, mocking, TDD)</li>
+	<li>Code coverage, es útil?</li>
+	<li>Pomodoro</li>
+</ul>
+</pre> 
+
+<pre id="selemiun">
+<div>Test UI</div>
+ 
+ 
+  Selenium
+  Son costosos?
+  Browser stack
+</pre>
+
+<pre id="automatizacion">
+<div>Automatización</div>
+DRY = Hay que ser vagos!
+Integración continua
+Delivery continuo
+<a href="#herramientas_automatizacion">Herramientas</a>
+ 
+</pre>
+ 
+<pre id="herramientas_automatizacion" >
+<div>Herramientas para automatización</div>
+ Node
+ Bower
+ Grunt
+ Bats
+ Lo que sea
+</pre> 
+
+En Javascript:
+
+Esta parte es como una reseña de diferentes herramientas que usamos (que son más o menos un standar) para  cubrir un poco todo esto
+ Herramientas como templating
+ separar responsabilidades, no tener llamadas al DOM en nuestro código de negocios (underscore)
+ autobinding, trabajar contra un modelo que actualiza y lee lo que pasa en la UI (rivets)
+ MVC Backbone
+ modularización, IoC Requirejs
+
+
+Git, cómo nos ayuda a gestionar los cambios
+
+
+Más sobre automatización.
+
+UI Test
+ halbamos un poco de Selemiun al final
+
+otras útiles
+
+pomodoro
+pair programing por turnos
+
+ 
+ 
+ 
+ =================================== herramientas
+jquery
+ 
+Requirejs
+ problemas a abordar SPA, dependencias, velocidad
+ concepto de módulo
+ paths
+ shim
+ templates
+r.js
+ minificación
+ bundling 
+Bower
+ intro
+underscorejs
+ intro
+ templating
+Backbonejs
+ intro
+ demo
+Git
+ ventajas vs svn
+ ejemplos
+Rivetsjs
+ ejemplos
+ uso con Backbone
+
+Qunit
+ intro
+ ejemplos
+ usando requirejs para mocking
+blanket
+
+
+Phantom
+ concepto
+ correr unit test contra phantom
+ 
+Selenium
+ intro
+ ejemplos
+ 
+ 
+ 
+ 
+ ======================= time line ===========================0
+ 
+ </pre>
+ </body>
+</pre>
+</html>
+
+
