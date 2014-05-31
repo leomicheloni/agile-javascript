@@ -20,33 +20,46 @@ body {
 	color: #FFF;
 }
 
-.code{
+.bower{
+	background-color: #E9E58C;
+	color: #000000;
+}
+
+.code3{
 	color: #51009B;
 	width: 1000px;
 	font-size: 20px;
 	background-color: #EEEEEE;
 }
 
-tr{
+pre.backbone{
+	color: #FFF;
+}
+
+
+
+
+
+tr.speech{
 	height: 50px;
 	font-size:30px;
 }
 
-td{
+td.speech{
 	width: 250px;
 }
 
-.speech pre{
+pre.speech{
 	height: 700px;
 }
 
-pre div{
+pre.lgm div{
 	font-size: 30px;
 	text-align: center;
 	background-color: #FAFAFA;
 }
 
-pre span{
+pre.lgm span{
 	font-size: 25px;
 }
 

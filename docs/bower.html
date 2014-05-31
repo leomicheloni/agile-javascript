@@ -1,0 +1,44 @@
+<html>
+<link rel="stylesheet" href="style.css" />
+<head></head>
+<body class="bower">
+<pre>
+<a href="https://github.com/bower/bower">
+<img style="height: 250px; width: 250px" src="images/bower.png" alt="" />
+</a>
+Es un manejador de paquetes (como Nuget o npm) basado en GIT
+</pre>
+<pre>
+Para utilizarlos basta tener dos archivos en nuestro directorio:
+<ul>
+	<li>.bowerrc para indicar parámetros de configuración, por ejemplo el directorio destino</li>
+	<li>bower.json para indicar los paquetes que queremos instalar</li>
+</ul>
+
+</pre>
+<div>Ejemplo de archivos de configuración</div>
+<pre class="code">
+.bowerrc
+{
+	&quot;directory&quot;: &quot;js/vendor&quot;
+}
+
+bower.json
+
+{
+	&quot;name&quot;: &quot;aplicacion&quot;,
+	&quot;version&quot;: &quot;0.1&quot;,
+	&quot;dependencies&quot;:
+		{ 
+			&quot;jquery&quot;: &quot;1.11.1&quot;,
+			&quot;underscore&quot;: &quot;1.6.0&quot;
+		}
+}
+
+</pre>
+<div>uso:</div>
+<pre class="code">
+bower install
+</pre>
+</body>
+</html>
