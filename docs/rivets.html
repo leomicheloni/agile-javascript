@@ -1,0 +1,49 @@
+<html>
+<link rel="stylesheet" href="style.css" />
+<head>
+<style type="text/css">
+.logo{
+	font-size: 24px;
+	font-family: 'Proxima Nova', serif;
+	text-decoration: none;
+	background-color: #3A8AEA;
+	color: #FFF;
+}
+
+</style>
+</head>
+<body class="rivets">
+<a class="logo" href="http://www.rivetsjs.com">
+<div>RIVETS.JS</div>
+</a>
+<pre>
+Permite realizar binding automático, es decir, 
+tener un model en nuestra aplicación y actualizar la UI automáticamente a partir de mismo y viceversa.
+Es muy extensible
+Es muy liviano
+</pre>
+<div>Ejemplo:</div>
+<pre class="code">
+var model = {
+		nombre: &quot;Michael&quot;,
+		apellido: &quot;Richards&quot;,
+		saludar: function(){
+			return &quot;Hola, mi nombre es &quot; + this.nombre;
+		}	
+	};
+var view = Rivets.bind($(&quot;#vista&quot;), model);
+</pre>
+<pre>Vista</pre>
+<pre class="code">
+&lt;div&gt;
+&lt;span rv-text=&quot;nombre&quot;&gt;&lt;/span&gt;
+&lt;span rv-text=&quot;apellido&quot;&gt;&lt;/span&gt;
+&lt;input type=&quot;button&quot; value=&quot;saludar&quot; rv-on-click=&quot;saludar&quot; /&gt;
+&lt;/div&gt;
+</pre>
+<pre>
+Permite utilizar filtros sobre los valores que se aplican a la vista.
+Podemos definir nuestros propiedos adapters si queremos variar la forma de relacionarse con el modelo, por ejemplo, para usar Backbone.
+</pre>
+</body>
+</html>
