@@ -10,6 +10,11 @@ body {
 	color: #F0F0F0;
 }
 
+.phantom{
+	background-color: #43413E;
+	color: #FFF;
+}
+
 .require{
 	background-color: #F0F0F0;
 	color: #F08033;
