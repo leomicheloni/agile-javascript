@@ -1,0 +1,33 @@
+<html>
+<link rel="stylesheet" href="style.css" />
+<head></head>
+<body class="underscore">
+<pre>
+<a href="http://underscorejs.org">
+<img src="images/underscore.png" alt="" />
+</a>
+Desarrollador por Jeremy Ashkenas, creador de Backbone y Coffee scripts
+Es un conjunto de utilidades para manipular colecciones y arrays
+Tiene un potente motor de templates basado en el jquery.tmpl de John Resig
+</pre>
+<div>Principales funciones:</div>
+<pre class="code">
+_.each([1, 2, 3], alert);
+
+var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+
+_.where(listOfPlays, {author: &quot;Shakespeare&quot;, year: 1611})
+</pre>
+<div>Templating</div>
+<pre>
+Es muy similiar a la sintáxis de ASP.NET
+Se pueden invocar funciones de Javascript desde el template
+</pre>
+<pre class="code">
+&lt;div id=&quot;&lt;%-id%&gt;&quot;&gt;
+&lt;label&gt;Nombre&lt;/label&gt;&lt;span&gt;&lt;%-usuario.nombre%&gt;&lt;/span&gt;
+&lt;label&gt;Es mayor de edad: &lt;%-calcularEdad(usuario.edad)%&gt; &lt;/label&gt;
+&lt;/div&gt;
+</pre>
+</body>
+</html>
