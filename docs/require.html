@@ -57,5 +57,32 @@ También podemos cambiarlas cuando hacemos test para inyectar mocks sin tocar nue
 Después de todo Requirejs no es más que un IoC
 Shim me permite indicar cómo tratar módulos que no soportar Requirejs
 </pre>
+<div>R.js</div>
+<pre>
+Extra: R.js (incluido en el paquete de Requiejs) me permite hacer bunling y minificación de archivos basado en la configuración de Requiejs
+Con la ayuda de Nodejs
+También puedo hacer lo mismo a partir de un css con imports
+También puedo hacer lo mismo con templates cargados con el plugin de texto oficial
+</pre>
+<pre class="code">
+node r.js -o ../js/config.js
+</pre>
+<pre>
+El config de R.js es muy similar a los paths de Requirejs
+</pre>
+<pre class="code">
+baseUrl: &quot;js&quot;,
+paths: {
+	&quot;jquery&quot;: &quot;empty:&quot;
+},
+&quot;shim&quot;: {
+	&quot;jquery-ui&quot;: {
+		deps: [&quot;jquery&quot;],
+		exports: &quot;jQuery.fn.dialog&quot;
+},
+name: &quot;archivomain&quot;,
+out: &quot;salida.js&quot;,
+optimize: &quot;none&quot; 
+</pre>
 </body>
 </html>
