@@ -1,5 +1,26 @@
 
-body { font: 12px 'Lucida Grande', 'Lucida Sans Unicode', 'Verdana', 'sans-serif'; }
+body { 
+	font: 20px 'Lucida Grande', 'Lucida Sans Unicode', 'Verdana', 'sans-serif'; 
+	background-color: #A0A0F0;
+}
+
+.qunit{
+	font: 20px 'Lucida Grande', 'Lucida Sans Unicode', 'Verdana', 'sans-serif'; 
+	background-color: #6B2266;
+	color: #F0F0F0;
+}
+
+.require{
+	background-color: #F0F0F0;
+	color: #F08033;
+}
+
+.code{
+	color: white;
+	width: 1000px;
+	font-size: 20px;
+	background-color: #80A0A0;
+}
 
 tr{
 	height: 50px;
@@ -10,7 +31,7 @@ td{
 	width: 250px;
 }
 
-pre{
+.speech pre{
 	height: 700px;
 }
 
