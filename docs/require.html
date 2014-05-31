@@ -12,20 +12,50 @@ Carga dinámica y caché
 <div>Principales funciones:</div>
 
 <pre class="code">
-define(["dependencia"], function(dependecia){
-	dependencia.hacer();
+define([], function(){
+	var A = {
+		hacer: function(){
+			console.log("hola");
+		}
+	};
+	return A;
 });
+
+require(["a"], function(A){
+	A.hacer();
+});
+
 </pre>
 <div>HTML para empezar</div>
 <pre class="code">
 &lt;html&gt;
-&lt;body&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;qunit.css&quot; /&gt;
-&lt;div id=&quot;qunit&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;qunit-fixture&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;qunit-1.12.0.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;require.js&quot; data-main=&quot;main.js&quot;&gt;&lt;/script&gt;
 &lt;/html&gt;
+</pre>
+<div>Definir paths</div>
+<pre class="code">
+require.config({
+	baseUrl: &quot;js&quot;,
+	paths:{
+		&quot;jquery&quot;: &quot;lib/jquery&quot;,
+		&quot;underscore&quot;: &quot;lib/underscore&quot;
+		&quot;backbone&quot;: &quot;lib/backbone&quot;
+	},
+	shim:{
+		&quot;backbone&quot;: {
+			&quot;exports&quot;: &quot;Backbone&quot;,
+			&quot;dependencies&quot;:{
+				&quot;underscore&quot;
+			}
+		}
+	}
+});
+</pre>
+<pre>
+Los paths permites resumir las rutas de las dependecias o cambiar su nombre
+También podemos cambiarlas cuando hacemos test para inyectar mocks sin tocar nuestro código
+Después de todo Requirejs no es más que un IoC
+Shim me permite indicar cómo tratar módulos que no soportar Requirejs
 </pre>
 </body>
 </html>
