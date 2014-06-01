@@ -42,7 +42,9 @@ pre.backbone{
 }
 
 
-
+body.speech{
+	background-color: #FFF;
+}
 
 
 tr.speech{
@@ -58,7 +60,7 @@ pre.speech{
 	height: 700px;
 }
 
-pre.lgm div{
+pre.speech div{
 	font-size: 30px;
 	text-align: center;
 	background-color: #FAFAFA;

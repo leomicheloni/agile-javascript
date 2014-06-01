@@ -4,20 +4,20 @@
 
 </head>
 <body class="speech">
-<pre id="titulo" class="titulo">
+<pre id="titulo" class="speech titulo">
 Desarrollo ágil con Javascript.
  Prácticas, técnicas y herramientas
 </pre>
 
 
-<pre id="data" class="data">
+<pre id="data" class="speech data">
 Mi nombre es Leonardo Micheloni
 <a href="http://twitter.com/leomicheloni">@leomicheloni</a>
 Trabajo en Kinetica Solutions como desarrollador
 </pre>
 
 
-<pre id="objetivo" class="objetivo">
+<pre id="objetivo" class="speech objetivo">
 <div>¿Cuál es el objetivo?</div>
 Vamos a hablar, repasar, probar y poner en práctica cosas que usamos día de a día para el desarrollo ágil.
 
@@ -31,7 +31,7 @@ Vamos a hablar, repasar, probar y poner en práctica cosas que usamos día de a dí
 En resumen: nuestro objetivo es satisfacer al cliente y disfrutar haciendo las cosas bien.
 </pre>
 
-<pre id="agenda" class="agenda">
+<pre id="agenda" class="speech agenda">
 <div>Agenda</div>
 <table>
 <tr>
@@ -70,7 +70,7 @@ En resumen: nuestro objetivo es satisfacer al cliente y disfrutar haciendo las c
 
 
 
-<pre id="agilidad" class="agilidad">
+<pre id="agilidad" class="speech agilidad">
 <div>Agilidad</div>
 <span>Qué es la agilidad?</span>
 <span>Qué problemas permite afrontar?</span>
@@ -94,7 +94,7 @@ La agilidad también es:
 
 
 
-<pre id="problemas">
+<pre id="problemas" class="speech ">
 <div>Hay un problema</div>
 El problema es que para soportar todos esos principios hace falta apoyarse en técnicas (llamemoslás costumbres)
 </pre>
@@ -102,18 +102,23 @@ El problema es que para soportar todos esos principios hace falta apoyarse en té
 
 
 
-<pre>
+<pre class="speech">
 <div>Por ejemplo</div>
 Es difícil soportar cambios continúos si nuestra arquitectura no escala
 <a href="#arquitectura">Tenemos que seguir principios de arquitectura</a>
+
 Es muy costoso tener que hacer ciertas tareas a mano
 <a href="#automatizacion">tenemos que automatizar el despliege del soft y otras tareas (delivery continuo)</a>
+
 A medida que crece la complejidad del proyecto es más importante hacer pruebas de regresión
 <a href="#tdd">tenemos que automatizar pruebas unitarias</a>
+
 Es costos probar todo de nuevo, y es complejo probar la UI de manera consistente
 <a href="#selemiun">Prueba de UI automáticas o semi automáticas</a>
+
 Que no haya partes "oscuras" del código y tener propiedad colectiva del código.
 <a href="#pair">Pair programing</a>
+
 Es importante poder soportar versiones previas del producto, gestionar RC, version de concepto, etc.
 <a href="#git">Tenemos que contar con un gestión de versiones potente y confiable</a> 
 </pre>
@@ -121,7 +126,7 @@ Es importante poder soportar versiones previas del producto, gestionar RC, versi
 
 
 
-<pre id="git">
+<pre id="git" class="speech ">
 <div>GIT</div>
 El control de versiones nos tiene que permitir gestionar cambios
 <ul>
@@ -132,13 +137,14 @@ El control de versiones nos tiene que permitir gestionar cambios
 	<li>trabajo remoto</li>
 	<li>brach branch brach</li>
 </ul>
+<a href="git.html">Ir</a>
 </pre>
 
 
 
 
 
-<pre id="arquitectura">
+<pre id="arquitectura" class="speech ">
 <div>Principios de arquitectura</div>
 Patrones: MVC, Facade, Repositoy, etc.
 Técnicas: IoC, Interfaces, reutilización, etc.
@@ -155,11 +161,17 @@ SOLID:
 Pero......necesitamos utilizar herramientas para cumplir con SOLID y todo lo demás.
 (o hacerlo a mano, pero eso va en contra de el principio de DYR o reinventar la rueda)
 
+Herramientas:
+<a href="require.html">Require Js</a>
+<a href="underscore.html">Underscore Js</a>
+<a href="rivets.html">Rivets Js</a>
+<a href="backbone.html">Backbone Js</a>
+
 </pre>
 
 
 
-<pre id="pair">
+<pre id="pair" class="speech ">
 <div>Pair programing</div>
 Otra prácticas que usamos para poder seguir los principios de la agilidad (por ejemplo propiedad colectiva del código) es pair programing?
 
@@ -175,7 +187,7 @@ cuántos hace pair de ustedes? (encuentas)
 
 
 
-<pre id="tdd">
+<pre id="tdd" class="speech ">
 <div>TDD</div>
 <ul>
 	<li>Tener un conjunto de test que permite validar funcionalidades core (al menos)</li>
@@ -188,16 +200,20 @@ cuántos hace pair de ustedes? (encuentas)
 </ul>
 Programar por turnos haciendo Pair programing y convinando con Pomodoro.
 Para generar propiedad colectiva del código, nivelar conocimientos, mejorar la arquitectura, dar visibilidad.
+
+Herramientas:
+<a href="qunit.html">Qunit</a>
+
 </pre> 
 
-<pre id="selemiun">
+<pre id="selemiun" class="speech ">
 <div>Test UI</div>
   Selenimm
   ¿Son costosos?
   Browser stack
 </pre>
 
-<pre id="automatizacion">
+<pre id="automatizacion" class="speech ">
 <div>Automatización</div>
 DRY = Hay que ser vagos!
 Integración continua
@@ -207,7 +223,7 @@ En un proceso completo lo ideal sería tener un buena cobertura de Unit test, UI 
 Luego de verificar todos los test que se despliegue automáticamente a un ambiente de prueba. 
 </pre>
  
-<pre id="herramientas_automatizacion" >
+<pre id="herramientas_automatizacion" class="speech " >
 <div>Herramientas para automatización</div>
  Node
  Bower
