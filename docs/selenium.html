@@ -1,0 +1,98 @@
+﻿<html>
+<link rel="stylesheet" href="style.css" />
+<head>
+<style type="text/css">
+
+</style>
+</head>
+<body class="selenium">
+<a class="logo" href="http://docs.seleniumhq.org/">
+<img src="images/selenium.png" alt="" />
+</a>
+<div>Es una herramienta de automatización que permite manipular el navegador</div>
+<pre>
+Pensada para hacer Test de UI
+</pre>
+<pre>
+Soporta todos los principales navegadores
+<ul>
+<li>Firefox</li>
+<li>Internet Explorer 6+</li>
+<li>Chrome</li>
+<li>Opera</li>
+<li>Safari</li>
+<li>Phantom</li>
+</pre>
+<pre>
+El modo más común de usarlo es grabar lo que uno hace con el plugin para Firefox y luego ejecutarlo.
+Este código se puede exportar y se utilizado como punto de partida para hacer un test automatizado.
+</pre>
+<pre>Se puede interactuar con la API con los principales lenguaje a través de Web Driver una API</pre>
+<ul>
+<li>C#</li>
+<li>Java</li>
+<li>Python</li>
+<li>Ruby</li>
+<li>Javascript</li>
+<li>Perl</li>
+<li>PHP</li>
+</ul>
+<pre>En el caso de C# existe un <a href="http://www.nuget.org/packages/Selenium.WebDriver">paquete de Nuget</a> para interactuar con Selenium</pre>
+<pre class="code">
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+
+// Requires reference to WebDriver.Support.dll
+using OpenQA.Selenium.Support.UI;
+
+class GoogleSuggest
+{
+    static void Main(string[] args)
+    {
+        // Create a new instance of the Firefox driver.
+
+        // Notice that the remainder of the code relies on the interface, 
+        // not the implementation.
+
+        // Further note that other drivers (InternetExplorerDriver,
+        // ChromeDriver, etc.) will require further configuration 
+        // before this example will work. See the wiki pages for the
+        // individual drivers at http://code.google.com/p/selenium/wiki
+        // for further information.
+        IWebDriver driver = new FirefoxDriver();
+
+        //Notice navigation is slightly different than the Java version
+        //This is because 'get' is a keyword in C#
+        driver.Navigate().GoToUrl("http://www.google.com/");
+
+        // Find the text input element by its name
+        IWebElement query = driver.FindElement(By.Name("q"));
+
+        // Enter something to search for
+        query.SendKeys("Cheese");
+
+        // Now submit the form. WebDriver will find the form for us from the element
+        query.Submit();
+
+        // Google's search is rendered dynamically with JavaScript.
+        // Wait for the page to load, timeout after 10 seconds
+        WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+        wait.Until((d) => { return d.Title.ToLower().StartsWith("cheese"); });
+
+        // Should see: "Cheese - Google Search"
+        System.Console.WriteLine("Page title is: " + driver.Title);
+
+        //Close the browser
+        driver.Quit();
+    }
+}
+</pre>
+<pre>
+Es muy interesante poder tener nuestros test de UI integrados con el proceso de delivery continuo
+</pre>
+<pre>Se puede utilizar con <a href="https://www.browserstack.com/automate/c-sharp">Browser stack fácilmente</a></pre>
+<pre class="code">
+</pre>
+</body>
+</html>
+

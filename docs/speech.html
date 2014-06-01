@@ -67,6 +67,9 @@ En resumen: nuestro objetivo es satisfacer al cliente y disfrutar haciendo las c
 </table>
 </pre>
 
+
+
+
 <pre id="agilidad" class="agilidad">
 <div>Agilidad</div>
 <span>Qué es la agilidad?</span>
@@ -87,10 +90,17 @@ La agilidad también es:
 <span>responde rápido a los cambios</span>
 </pre>
 
+
+
+
+
 <pre id="problemas">
 <div>Hay un problema</div>
 El problema es que para soportar todos esos principios hace falta apoyarse en técnicas (llamemoslás costumbres)
 </pre>
+
+
+
 
 <pre>
 <div>Por ejemplo</div>
@@ -107,7 +117,9 @@ Que no haya partes "oscuras" del código y tener propiedad colectiva del código.
 Es importante poder soportar versiones previas del producto, gestionar RC, version de concepto, etc.
 <a href="#git">Tenemos que contar con un gestión de versiones potente y confiable</a> 
 </pre>
-TDD
+
+
+
 
 <pre id="git">
 <div>GIT</div>
@@ -121,6 +133,9 @@ El control de versiones nos tiene que permitir gestionar cambios
 	<li>brach branch brach</li>
 </ul>
 </pre>
+
+
+
 
 
 <pre id="arquitectura">
@@ -142,7 +157,7 @@ Pero......necesitamos utilizar herramientas para cumplir con SOLID y todo lo dem
 
 </pre>
 
-<pre>
+
 
 <pre id="pair">
 <div>Pair programing</div>
@@ -155,8 +170,10 @@ cuántos hace pair de ustedes? (encuentas)
 	<li>decisiones de micro-arquitectura</li>
 	<li>nivelación de conocimientos</li>
 </ul>
- 
 </pre>
+
+
+
 
 <pre id="tdd">
 <div>TDD</div>
@@ -169,14 +186,14 @@ cuántos hace pair de ustedes? (encuentas)
 	<li>Code coverage, es útil?</li>
 	<li>Pomodoro</li>
 </ul>
+Programar por turnos haciendo Pair programing y convinando con Pomodoro.
+Para generar propiedad colectiva del código, nivelar conocimientos, mejorar la arquitectura, dar visibilidad.
 </pre> 
 
 <pre id="selemiun">
 <div>Test UI</div>
- 
- 
-  Selenium
-  Son costosos?
+  Selenimm
+  ¿Son costosos?
   Browser stack
 </pre>
 
@@ -186,7 +203,8 @@ DRY = Hay que ser vagos!
 Integración continua
 Delivery continuo
 <a href="#herramientas_automatizacion">Herramientas</a>
- 
+En un proceso completo lo ideal sería tener un buena cobertura de Unit test, UI test y que todo se ejecute con cada Push al master.
+Luego de verificar todos los test que se despliegue automáticamente a un ambiente de prueba. 
 </pre>
  
 <pre id="herramientas_automatizacion" >
@@ -195,82 +213,11 @@ Delivery continuo
  Bower
  Grunt
  Bats
- Lo que sea
+ Selenium
+ Phantom
+ 
 </pre> 
 
-En Javascript:
-
-Esta parte es como una reseña de diferentes herramientas que usamos (que son más o menos un standar) para  cubrir un poco todo esto
- Herramientas como templating
- separar responsabilidades, no tener llamadas al DOM en nuestro código de negocios (underscore)
- autobinding, trabajar contra un modelo que actualiza y lee lo que pasa en la UI (rivets)
- MVC Backbone
- modularización, IoC Requirejs
-
-
-Git, cómo nos ayuda a gestionar los cambios
-
-
-Más sobre automatización.
-
-UI Test
- halbamos un poco de Selemiun al final
-
-otras útiles
-
-pomodoro
-pair programing por turnos
-
- 
- 
- 
- =================================== herramientas
-jquery
- 
-+Requirejs
- problemas a abordar SPA, dependencias, velocidad
- concepto de módulo
- paths
- shim
- templates
-*r.js
- minificación
- bundling 
-+Bower
- intro
-*underscorejs
- intro
- templating
-+Backbonejs
- intro
- demo
-*Git
- ventajas vs svn
- ejemplos
-+Rivetsjs
- ejemplos
- uso con Backbone
-
-+Qunit
- intro
- ejemplos
- usando requirejs para mocking
-+blanket
-
-
-*Phantom
- concepto
- correr unit test contra phantom
- 
-*Selenium
- intro
- ejemplos
- 
- 
- 
- 
- ======================= time line ===========================0
- 
  </pre>
  </body>
 </pre>
