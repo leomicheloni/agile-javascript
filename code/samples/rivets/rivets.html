@@ -1,0 +1,29 @@
+<html>
+<head>
+<script type="text/javascript" src="js/vendor/rivets/dist/rivets.js"></script>
+</head>
+<body>
+<div id="loginbox">
+Nombre<input type="text" rv-value="nombre" /> <br />
+Password <input type="password" rv-value="password" /> <br />
+<input type="button" value="ingresar" rv-on-click="login" />
+</div>
+
+<script type="text/javascript">
+var model = {
+	nombre: "",
+	password: "",
+	login: function(el, m){
+		console.dir(JSON.stringify(m));
+	}
+
+};
+
+
+var target = document.querySelector("#loginbox");
+var view = rivets.bind(target, model);
+
+</script>
+
+</body>
+</html>
