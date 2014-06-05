@@ -47,14 +47,11 @@ body.speech{
 }
 
 
-tr.speech{
+table.speech tr{
 	height: 50px;
 	font-size:30px;
 }
 
-td.speech{
-	width: 250px;
-}
 
 pre.speech{
 	height: 700px;
