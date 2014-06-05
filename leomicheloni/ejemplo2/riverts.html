@@ -3,10 +3,12 @@
 <script type="text/javascript" src="js\vendor\requirejs\require.js"></script>
 <script type="text/javascript">
 require.config({
+	baseUrl: "js",
 	paths: {
-		"jquery": "js/vendor/jquery/dist/jquery",
-		"underscore": "js/vendor/underscore/underscore",
-		"rivets": "js/vendor/rivets/dist/rivets"
+		"jquery": "vendor/jquery/dist/jquery",
+		"underscore": "vendor/underscore/underscore",
+		"rivets": "vendor/rivets/dist/rivets",
+		"template": "vendor/requirejs/require.text"
 	},
 	shim:{
 		"underscore": {
@@ -17,40 +19,24 @@ require.config({
 		}
 	}
 });
+
+require(["models/usuario", "jquery", "rivets", "underscore", "template!templates/userlogin.html"], 
+	function(model, $, Rivets, _, tmpl){		
+	
+	
+	var template = _.template(tmpl, {nombre: "pp"});	
+	
+	$("#container").append(template);
+	
+	view = Rivets.bind(document.getElementById("container"), model);		
+
+});
+	
 </script>
-
-<script id="tmpl_datos" type="text/tmpl">
-<div >
-Nombre: <input rv-value="nombre" value="<%-nombre%>" type="text" />
-Password: <input rv-value="password" type="password" />
-<input type="button" value="ingresar" rv-on-click="ingresar" />
-</div>
-</script>
-
-
-
 </head>
+
 <body>
-<div id="container"></div>
-
-
-<script type="text/javascript">
-
-	require(["js/models/usuario", "jquery", "rivets", "underscore"], 
-		function(model, $, Rivets, _, tmpl){		
-		
-		var tmpl = $("#tmpl_datos").html();
-		
-		var template = _.template(tmpl, {nombre: "pp"});	
-		
-		$("#container").append(template);
-		
-		view = Rivets.bind(document.getElementById("container"), model);		
-	
-	});
-	
-</script>
-
+	<div id="container"></div>
 </body>
 
 </html>
