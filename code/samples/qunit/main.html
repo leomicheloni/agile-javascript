@@ -5,12 +5,20 @@
 <body>
 <div id="qunit"></div>
 <script type="text/javascript" src="js/vendor/qunit/qunit/qunit.js"></script>
+<script type="text/javascript" src="js/vendor/blanket/dist/qunit/blanket.js"></script>
 <script type="text/javascript">
+
 module("probando");
+
 test("primer test", function(){
+	
 	expect(2);
-	equal(1===1, true);
-	ok(true);
+	
+	var a= 1;
+	var b = 2;
+	var c = a + b;
+
+	equal(3, c);
 });
 
 </script>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="js\vendor\qunit\qunit\qunit.css" />
+<script type="text/javascript" src="js\vendor\qunit\qunit\qunit.js" ></script>
+<script type="text/javascript" src="js\vendor\requirejs\require.js"></script>
+<script type="text/javascript">
+
+		QUnit.config.autostart = false;	
+
+require.config({
+	baseUrl: "js",
+	paths: {
+		"jquery": "vendor/jquery/dist/jquery",
+		"underscore": "vendor/underscore/underscore",
+		"rivets": "vendor/rivets/dist/rivets",
+		"template": "vendor/requirejs/require.text",
+		"ajaxlib": "mocks/ajax",
+	},
+	shim:{
+		"underscore": {
+			"exports": "_",
+			"deps":[
+				"jquery"
+			]
+		}
+	}
+});
+	
+</script>
+
+<script type="text/javascript" data-cover-never=""  data-cover-flags="" src="js\vendor\blanket\dist\qunit\blanket.js"></script>
+
+</head>
+
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+	<script type="text/javascript">
+	require(["../test"], function(){
+		QUnit.start();
+	});
+
+
+	</script>
+
+</body>
+
+
+</html>
